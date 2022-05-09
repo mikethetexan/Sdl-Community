@@ -31,12 +31,12 @@ namespace Sdl.Community.XliffToLegacyConverter
         public About()
         {
             InitializeComponent();
-            Text = string.Format("About {0}", AssemblyProduct + " for SDL Trados Studio 2019");
-            labelProductName.Text = AssemblyProduct + @" for SDL Trados Studio 2019";
-	        labelVersion.Text = "2.0"; // we need to put the version from manifest file
+            Text = string.Format("About {0}", AssemblyProduct + " for Trados Studio 2022");
+            labelProductName.Text = AssemblyProduct + @" for Trados Studio 2022";
+            labelVersion.Text = AssemblyFileVersion;
             labelCopyright.Text = AssemblyCopyright;
             labelCompanyName.Text = AssemblyCompany;
-            textBoxDescription.Text = AssemblyDescription + "\r\n\r\n\r\n" + copyRight;
+            //textBoxDescription.Text = AssemblyDescription + "\r\n\r\n\r\n" + copyRight;
         }
 
         #region Assembly Attribute Accessors
@@ -66,7 +66,18 @@ namespace Sdl.Community.XliffToLegacyConverter
             }
         }
 
-        public string AssemblyDescription
+        public string AssemblyFileVersion
+        {
+	        get
+	        {
+		        var assembly = Assembly.GetExecutingAssembly();
+		        var fileVersionInfo = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
+		        var version = fileVersionInfo.FileVersion;
+		        return version;
+	        }
+        }
+
+		public string AssemblyDescription
         {
             get
             {

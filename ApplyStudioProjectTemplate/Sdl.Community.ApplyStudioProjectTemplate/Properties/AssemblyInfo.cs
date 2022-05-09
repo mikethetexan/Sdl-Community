@@ -13,12 +13,9 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("Apply Studio Project Template")]
 [assembly: AssemblyDescription("This plug-in allows you to apply settings from a template (.sdltpl) or project (.sdlproj) to one or more projects in SDL Trados Studio 2017.")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SDL plc")]
 [assembly: AssemblyProduct("Apply Studio Project Template")]
-[assembly: AssemblyCopyright("Copyright © 2018")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+//[assembly: AssemblyCompany("RWS")]
+//[assembly: AssemblyCopyright("Copyright © RWS 2021")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -38,5 +35,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("6.2.0.0")]
-[assembly: AssemblyFileVersion("6.2.6.0")]
+[assembly: AssemblyVersion("7.0.0.0")]
+[assembly: AssemblyFileVersion("7.0.0.0")]
